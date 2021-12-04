@@ -4,33 +4,42 @@
     <meta charset="UTF-8">
     <title>时间不多了</title>
     <style>
+        body{
+            background-image:url("pic/屏幕截图 2021-12-05 001617.jpg");
+        }
+        @font-face{
+         font-family: '67'; 
+         src: url("fonts/字魂67号-勾玉行书.ttf");
+         }
+        @font-face{
+         font-family: 'ff'; 
+         src: url("fonts/ff.ttf");
+         }
         .D1{
             margin-top: 100px;
-            border-radius: 20px 70px;
+            border-radius: 70px 70px;
             background: bisque;
             width: 900px;
             padding-top: 50px;
             padding-bottom: 50px;
-            font-family:  Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
-        }
+            
+            }
         .T1{
-            color: #f00;
+            color: #FF0000;
             font-size: 50px;
-            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"
-        }
+            }
         .T2{
-            color: dodgerblue;
-            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"
-        }
+            color: #2842FF;
+            }
     </style>
 </head>
 <body onload="time(),now()" >
 <div align="center">
-<div align="center" class="D1">
-    <h1>现在是：</h1>
-    <h1 id="now" class="T2"></h1>
-    <h2>距离期末考还剩：</h2>
-    <h1 id="time" class="T1"></h1>
+<div align="center" style="margin-top: 15%;">
+    <h1 style="font-family: '67';font-size: 50px;color: white">现在是：</h1>
+    <h1 id="now" class="T2" style="font-family: 'FF';font-size: 40px;background-color: rgba(255,255,255,0.5);width: 630px;"></h1>
+    <h2 style="font-family: '67';font-size: 50px;color: white">距离期末考还剩：</h2>
+    <h1 id="time" class="T1" style="font-family: 'FF';font-size: 40px;background-color: rgba(255,255,255,0.5);width: 630px;"></h1>
 </div>
 </div>
 <script>
