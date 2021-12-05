@@ -50,11 +50,11 @@
         let h=(future.getTime()-N.getTime())%86400000/3600000;
         let m=(future.getTime()-N.getTime())%3600000/60000;
         let s=(future.getTime()-N.getTime())%60000/1000;
-        document.getElementById("time").innerHTML=d.toFixed(0)-30+"天"+h.toFixed(0)+8+"小时"+m.toFixed(0)+"分钟"+s.toFixed(0)+"秒"
+        document.getElementById("time").innerHTML=d.toFixed(0)+"天"+h.toFixed(0)+8+"小时"+m.toFixed(0)+"分钟"+s.toFixed(0)+"秒"
     }
     function now(){
         let N =new Date();
-        document.getElementById("now").innerHTML=N.getFullYear()+"年"+(N.getMonth()+1)+"月"+N.getDate()+"日"+N.getHours()+"小时"+
+        document.getElementById("now").innerHTML=N.getFullYear()+"年"+(N.getMonth())+"月"+N.getDate()+"日"+N.getHours()+"小时"+
             N.getMinutes()+"分钟"+N.getSeconds()+"秒";
         console.log("aaa");
     }
