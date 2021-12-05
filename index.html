@@ -6,6 +6,7 @@
     <style>
         body{
             background-image:url("pic/屏幕截图 2021-12-05 001617.jpg");
+            background-repeat:no-repeat;
         }
         @font-face{
          font-family: '67'; 
@@ -18,11 +19,12 @@
         .D1{
             margin-top: 100px;
             border-radius: 70px 70px;
-            background: bisque;
+            background: rgba(255,228,196,0.47);
             width: 900px;
             padding-top: 50px;
-            padding-bottom: 50px;
-            
+            padding-bottom: 0px;
+            color: #000000;
+            font-family: ff
             }
         .T1{
             color: #FF0000;
@@ -35,12 +37,14 @@
 </head>
 <body onload="time(),now()" >
 <div align="center">
-<div align="center" style="margin-top: 15%;">
-    <h1 style="font-family: '67';font-size: 50px;color: white">现在是：</h1>
-    <h1 id="now" class="T2" style="font-family: 'FF';font-size: 40px;background-color: rgba(255,255,255,0.5);width: 630px;"></h1>
-    <h2 style="font-family: '67';font-size: 50px;color: white">距离期末考还剩：</h2>
-    <h1 id="time" class="T1" style="font-family: 'FF';font-size: 40px;background-color: rgba(255,255,255,0.5);width: 630px;"></h1>
-</div>
+<div align="center" style="margin-top: 15%;" class="D1">
+    <p style="font-size: 53px;margin-top: -5%">现在是：</p>
+    <h1 id="now" class="T2" style="font-family: 'FF';font-size: 40px;width: 650px;margin-top: -2.8%;"></h1>
+    <td align="center">
+    <SPAN id=span_dt_dt></SPAN>
+    <SCRIPT language=javascript src="js/time_zk.js"></SCRIPT>
+    </td>
+    </div>
 </div>
 <script>
     let future= new Date(2022,1,11);
@@ -50,11 +54,11 @@
         let h=(future.getTime()-N.getTime())%86400000/3600000;
         let m=(future.getTime()-N.getTime())%3600000/60000;
         let s=(future.getTime()-N.getTime())%60000/1000;
-        document.getElementById("time").innerHTML=d.toFixed(0)+"天"+h.toFixed(0)+8+"小时"+m.toFixed(0)+"分钟"+s.toFixed(0)+"秒"
+        document.getElementById("time").innerHTML=d.toFixed(0)-30+"天"+h.toFixed(0)+8+"小时"+m.toFixed(0)+"分钟"+s.toFixed(0)+"秒"
     }
     function now(){
         let N =new Date();
-        document.getElementById("now").innerHTML=N.getFullYear()+"年"+(N.getMonth())+"月"+N.getDate()+"日"+N.getHours()+"小时"+
+        document.getElementById("now").innerHTML=N.getFullYear()+"年"+(N.getMonth()+1)+"月"+N.getDate()+"日"+N.getHours()+"小时"+
             N.getMinutes()+"分钟"+N.getSeconds()+"秒";
         console.log("aaa");
     }
