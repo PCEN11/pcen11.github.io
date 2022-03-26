@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>时间不多了</title>
-    <style>
-        body{
-            background-image:url("pic/屏幕截图 2021-12-05 001617.jpg");
-            background-repeat:no-repeat;
-        }
-        @font-face{
-         font-family: '67'; 
-         src: url("fonts/字魂67号-勾玉行书.ttf");
-         }
-        @font-face{
-         font-family: 'ff'; 
-         src: url("fonts/ff.ttf");
-         }
-        .D1{
-            margin-top: 100px;
-            border-radius: 70px 70px;
-            background: rgba(255,228,196,0.47);
-            width: 900px;
-            padding-top: 50px;
-            padding-bottom: 0px;
-            color: #000000;
-            font-family: ff
-            }
-        .T1{
-            color: #FF0000;
-            font-size: 50px;
-            }
-        .T2{
-            color: #2842FF;
-            }
-    </style>
+<meta charset="UTF-8">
+<title>时间不多了</title>
+<style>
+body {
+    background-image: url("pic/屏幕截图 2021-12-05 001617.jpg");
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: '67';
+    src: url("fonts/字魂67号-勾玉行书.ttf");
+}
+@font-face {
+    font-family: 'ff';
+    src: url("fonts/ff.ttf");
+}
+.D1 {
+    margin-top: 100px;
+    border-radius: 70px 70px;
+    background: rgba(255,228,196,0.47);
+    width: 900px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    color: #000000;
+    font-family: ff
+}
+.T1 {
+    color: #FF0000;
+    font-size: 50px;
+}
+.T2 {
+    color: #2842FF;
+}
+</style>
 </head>
 <body onload="time(),now()" >
 <div align="center">
-<div align="center" style="margin-top: 15%;" class="D1">
+  <div align="center" style="margin-top: 15%;" class="D1">
     <p style="font-size: 53px;margin-top: -5%">现在是：</p>
     <h1 id="now" class="T2" style="font-family: 'FF';font-size: 40px;width: 650px;margin-top: -2.8%;"></h1>
-    <td align="center">
-    <SPAN id=span_dt_dt></SPAN>
-    <SCRIPT language=javascript src="js/time_zk.js"></SCRIPT>
-    </td>
-    </div>
+    <td align="center"><SPAN id=span_dt_dt></SPAN> 
+      <SCRIPT language=javascript src="js/time_zk.js"></SCRIPT> 
+      <SPAN id=span_dt_xk></SPAN> 
+      <SCRIPT language=javascript src="js/time_xyspk.js"></SCRIPT></td>
+  </div>
 </div>
 <script>
     let future= new Date(2022,1,11);
