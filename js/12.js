@@ -26,6 +26,6 @@
       st.innerHTML = "戌时";
     } else if (hour >= 21 && hour < 23) {
       st.innerHTML = "亥时";
-    } else if (hour >= 23 && hour < 0) {
+    } else if (hour >= 23 && hour < 24) {
       st.innerHTML = "子时";
     }
