@@ -1,0 +1,48 @@
+/* CSS Document */
+body {
+  background-image: url("pic/2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@font-face {
+  font-family: '67';
+  src: url("fonts/字魂67号-勾玉行书.ttf");
+}
+@font-face {
+  font-family: 'ff';
+  src: url("fonts/ff.ttf");
+}
+.D1 {
+  margin-top: 100px;
+  border-radius: 70px 70px;
+  background: rgba(255, 228, 196, 0.47);
+  width: 900px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  color: #000000;
+  font-family: ff
+}
+.T1 {
+  color: #FF0000;
+  font-size: 50px;
+}
+.T2 {
+  color: #2842FF;
+}
+.gund {
+  	background-image: -webkit-linear-gradient(left, #FF0000, #0000FF 25%, #FFFF00 50%, #0000FF 75%, #FF0000);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation:  maskedAnimation 4s infinite linear;
+    font-size: 18px;
+}
+ 
+@keyframes maskedAnimation {
+	0% {
+    background-position: 0 0;
+	}
+	100% {
+	    background-position: -100% 0;
+	}
+}

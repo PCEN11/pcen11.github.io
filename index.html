@@ -1,69 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script type="text/javascript">
+$(function () {
+setInterval(function () {
+$("#pic").load(location.href + " #pic>*",  "");//注意后面DIV的ID前面的空格跟 id 后的>*，很重要！
+}, 500);//8秒自动刷新
+})
+    </script>
+<link rel="stylesheet" type="text/css" href="index.css"
 <meta charset="UTF-8">
 <title>时间不多了</title>
-<style>
-body {
-    background-image: url("pic/屏幕截图 2021-12-05 001617.jpg");
-    background-repeat: no-repeat;
-}
-@font-face {
-    font-family: '67';
-    src: url("fonts/字魂67号-勾玉行书.ttf");
-}
-@font-face {
-    font-family: 'ff';
-    src: url("fonts/ff.ttf");
-}
-.D1 {
-    margin-top: 100px;
-    border-radius: 70px 70px;
-    background: rgba(255,228,196,0.47);
-    width: 900px;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    color: #000000;
-    font-family: ff
-}
-.T1 {
-    color: #FF0000;
-    font-size: 50px;
-}
-.T2 {
-    color: #2842FF;
-}
-</style>
 </head>
 <body onload="time(),now()" >
 <div align="center">
-  <div align="center" style="margin-top: 15%;" class="D1">
-    <p style="font-size: 53px;margin-top: -5%">现在是：</p>
-    <h1 id="now" class="T2" style="font-family: 'FF';font-size: 40px;width: 650px;margin-top: -2.8%;"></h1>
-    <td align="center"><SPAN id=span_dt_dt></SPAN> 
-      <SCRIPT language=javascript src="js/time_zk.js"></SCRIPT> 
-      <SPAN id=span_dt_xk></SPAN> 
-      <SCRIPT language=javascript src="js/time_xyspk.js"></SCRIPT></td>
+  <div align="center" style="margin-top: 0%;" class="D1">
+    <p style="font-size: 53px;margin-top: -4%" class="gund">现在是：</p>
+    <h1 id="now" class="T2" style="font-family: 'FF';font-size: 40px;width: 700px;margin-top: -2.8%;" class="gund"></h1>
+    <td align="center" class="gund"><span id="span_dt_dt"></span> 
+      <script language="javascript" src="js/time_zk.js"></script> 
+      <span id="span_dt_xk"></span> 
+      <script language="javascript" src="js/time_xyspk.js"></script></td>
+      <marquee width="780px" style="font-size: 32px"></marquee>
   </div>
 </div>
-<script>
-    let future= new Date(2022,1,11);
-    function  time(){
-        let N =new Date();
-        let d=(future.getTime()-N.getTime())/86400000;
-        let h=(future.getTime()-N.getTime())%86400000/3600000;
-        let m=(future.getTime()-N.getTime())%3600000/60000;
-        let s=(future.getTime()-N.getTime())%60000/1000;
-        document.getElementById("time").innerHTML=d.toFixed(0)-30+"天"+h.toFixed(0)+8+"小时"+m.toFixed(0)+"分钟"+s.toFixed(0)+"秒"
-    }
-    function now(){
-        let N =new Date();
-        document.getElementById("now").innerHTML=N.getFullYear()+"年"+(N.getMonth()+1)+"月"+N.getDate()+"日"+N.getHours()+"小时"+
-            N.getMinutes()+"分钟"+N.getSeconds()+"秒";
-        console.log("aaa");
-    }
-    setInterval(now,1000);
-    setInterval(time,1000);
-</script>
+<script src="js/now.js"></script>
+    <div align="left" id="pic"><img alt="实时天气" src="http://www.tqyb.com.cn/data/obtMap/BCGZ_RainC.png" height="400px" style="margin-left: 400px;"></div>
 </body>
 </html>

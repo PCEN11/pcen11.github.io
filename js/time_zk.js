@@ -1,5 +1,5 @@
-function show_date_time(){
-window.setTimeout("show_date_time()", 1000);
+function show_date_time1(){
+window.setTimeout("show_date_time1()", 100);
 BirthDay=new Date("4/26/2022 08:00:00");
 today=new Date();
 timeold=(BirthDay.getTime()-today.getTime());
@@ -15,4 +15,4 @@ minsold=Math.floor((e_hrsold-hrsold)*60);
 seconds=Math.floor((e_minsold-minsold)*60);
 span_dt_dt.innerHTML="<font size=53px>距期中考还有：</font><br/><br/><font size=8 face='ff' color=red>"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒"+"<br></font><br>" ; // 这里你自己改。就是倒计时的样式，字体大小size=4 颜色是color
 }
-show_date_time();
+show_date_time1();
