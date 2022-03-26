@@ -12,6 +12,10 @@ body {
   font-family: 'ff';
   src: url("fonts/ff.ttf");
 }
+@font-face {
+  font-family: 'gu';
+  src: url("fonts/gu.ttf");
+}
 .D1 {
   margin-top: 100px;
   border-radius: 70px 70px;
